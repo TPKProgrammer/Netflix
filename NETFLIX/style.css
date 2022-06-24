@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap');
+
+
+/*DEFAULT*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.main {
+    display: grid;
+    /*grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;*/
+}
+
+/*HOME-SECTION/ MAIN*/
+.main .home-section {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7) url(./images/bg.jpg);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 90px 1fr;
+    font-weight: 600;
+}
+
+/*NAV*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*LOGO*/
+.logo {
+    size: 100px;
+    height: 120px;
+}
+
+
+/*MENU*/
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    position: relative;
+    float: right;
+    position: relative;
+}
+
+.menu ul li a {
+    font-size: 15px;
+    padding: 20px;
+    color: #000;
+    display: block;
+    border: 1px solid #fff; 
+    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    color: #000;
+}
+
+.menu i {
+    margin-right: 7px;
+}
+
+.menu i:nth-child(2) {
+    margin-left: 7px;
+}
+
+
+
+/*BUTTON*/
+.btn {
+    float: right;
+    margin-right: 40px;
+    height: 40px;
+    width: 79px;
+    border: none;
+    height: 32px;
+    border-radius: 5px;
+    background: rgb(202, 3, 3);
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+}
+
+/*SUB-MENU*/
+.sub-menu {
+   display: block;
+   position: absolute;
+   left: 0;
+   background: #fff;
+   width: 87%;
+   top: 100%;
+   border-radius: 5pxa;
+   display: none;
+}
+
+.sub-menu ul {
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
+
+.sub-menu ul li {
+    width: 100px;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,.5);
+    
+}
+
+.menu ul li:hover .sub-menu {
+    display: block;
+}
+
+.menu ul li:hover .sub-menu ul li a:hover {
+    background-color: #ff0000;
+    width: 89px;
+}
+
+/*HERO-MAIN*/
+.main .home-section .hero-main {
+    display: grid;
+    grid-template-rows: 1fr 200px;
+}
+
+/*HEADER*/
+.main .home-section .hero-main .header {
+    color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    font-family: arial;
+}
+
+.main .home-section .hero-main .header h1 {
+    font-weight: 600;
+    font-size: 50px;
+    position: relative;
+}
+
+.main .home-section .hero-main .header h1 span {
+    position: absolute;
+    left: 35px;
+ }   
+
+.main .home-section .hero-main .header p {
+    position: absolute;
+    margin-top: 190px;
+    color: rgb(236, 236, 236);
+}
+
+/*SEARCH*/
+.main .home-section .hero-main .search p {
+    display: flex;
+    justify-content: center;
+    color: rgb(199, 199, 199);
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.search input[type="email"] {
+    width: 400px;
+    margin-left: 380px;
+    height: 35px;
+    border-radius: 5px;
+    border: none; 
+    outline: none;
+    font-size: 15px;
+}
+
+
+/*BUTTON*/
+.main .home-section .hero-main .search button  {
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(202, 3, 3);
+}
+
+.main .home-section .hero-main .search button a {
+    color: #fff;
+}
+
+@media (max-width: 425px) {
+
+    .menu {
+        margin-top: 20px;
+    }
+
+    .menu ul li a {
+        display: flex;
+        font-size: 10px;
+        width: auto;
+    }
+
+    .btn {
+        width: 50px;
+    }
+
+    .btn a {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .menu .sub-menu {
+        width: 83%;
+        border-radius: 5px;
+    }
+
+    .menu .sub-menu li {
+        padding-left: 0;
+    }
+
+    .menu .sub-menu li a {
+        margin-left: 22px;
+    }
+
+    
+    .main .home-section .hero-main .header h1 {
+        font-size: 35px;
+    }
+
+    .main .home-section .hero-main .header p {
+       display: none;
+    }
+
+    .main .home-section .hero-main .search p {
+        font-size: 12px;
+    }
+
+    .search input[type="email"] {
+        width: 260px;
+        margin: 0;
+        height: 30px;
+        margin-left: 30px;
+        font-size: 13px;
+    }
+
+    .main .home-section .hero-main .search button {
+        width: 100px;
+        height: 30px;
+    }
+}
